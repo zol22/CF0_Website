@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>{{page.title}}</title>
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- ICONS END -->
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+          <li><img src="assets/images/CFO_logo.png"></li>
+            {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+            {% for p in navigation_pages %}
+                {% if p.navigation_weight %}
+                    <li>
+                        <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                            {{ p.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    <!-- NAVIGATION END -->
+   
+			{{ content }}
+	
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <ul>
+         <a href="https://www.meetup.com/Code-For-Orlando/" target="_blank"> <i id="meetupIcon" class="fab fa-meetup icon-meetup"></i></a>
+          <li><a href="/">HOME</a></li>
+          <li><a href="http://google.com">EVENTS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="http://google.com">CONDUCT</a></li>
+
+      </ul>
+    </footer>
+  <!-- FOOTER SECTION END -->
+
+  </body>
+</html>

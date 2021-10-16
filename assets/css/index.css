@@ -1,0 +1,105 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    height: 7em;
+    background-color: darkorange;
+  }
+  
+  nav ul img {
+    margin-top: -1em;
+    object-fit: contain;
+    width: 15em;
+    height: 100%;
+  }
+  
+  nav a {
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+  }
+  
+  li {
+    margin-top: 2em;
+  }
+
+  /* BODY */
+  
+  h1 {
+    font-size: 4em;
+    margin-left: 0.5em;
+  }
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+  .generalText {
+    margin-left: 1em;
+    font-size: 2em;
+  }
+  .info-section {
+    background-color: white;
+    color: black;
+    height: 30vh;
+    width: 100vw;
+  }
+  
+  .center {
+    margin: auto;
+  }
+  
+  .info-section:nth-child(odd) {
+    background-color: darkorange;
+    color: white;
+  }
+  
+  .split-section {
+    display: flex;
+    min-height: 50em;
+    flex-wrap: wrap;
+  }
+  
+  .split {
+    flex-direction: column;
+    display: flex;
+    flex: 0 0 50%;
+  }
+
+  /* FOOTER */
+  
+  footer {
+    height: 7em;
+    background-color: rgb(44, 44, 44);
+  }
+  
+  footer a {
+    font-size: 1em;
+    color: white;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+  }
+  
+  .icon-meetup {
+    font-size: 4em;
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+  }
